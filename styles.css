@@ -1,0 +1,45 @@
+body{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    font-weight: 600;
+    font-size: 1.3em;
+    width: 25%;
+    height: 75px;
+    border-radius: 5px;
+}
+
+.result{
+    width: 100%;
+    font-size: 5em;
+    border: 2px solid black;
+    text-align: right;
+    background-color: #ccc3c3;
+}
+.zero{
+    width: 50%;
+}
+.calc{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #464545;
+}
+
+.operator{
+    background-color: orange;
+}
+
+.func{
+    background-color: rgb(85, 85, 209);
+}
+
+.num{
+    background-color: #32ce9a;
+}

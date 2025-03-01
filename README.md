@@ -1,2 +1,2 @@
 # calculator
-Easy to use browser calculator
+Easy to use browser calculator.
