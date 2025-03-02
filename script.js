@@ -14,13 +14,44 @@ function divide(num1,num2){
     return num1/num2;
 }
 
-function operate(num1,operator,num2){
+function operate(){
+    switch(operatorX){
+        case "+":
+            console.log(Number(firstnum),Number(secondnum));
+            
+            result.textContent = add(Number(firstnum),Number(secondnum));
 
+            firstnum=undefined;
+            operatorX=undefined;
+            secondnum=undefined;
+            break;
+        case "-":
+            result.textContent = subtract(Number(firstnum),Number(secondnum));
+
+            firstnum=undefined;
+            operatorX=undefined;
+            secondnum=undefined;
+            break;
+        case "*":
+            result.textContent = multiply(Number(firstnum),Number(secondnum));
+
+            firstnum=undefined;
+            operatorX=undefined;
+            secondnum=undefined;
+            break;
+        case "/":
+            result.textContent = divide(Number(firstnum),Number(secondnum));
+
+            firstnum=undefined;
+            operatorX=undefined;
+            secondnum=undefined;
+            break;
+    }
 }
 
 let num;
 let firstnum;
-let operator;
+let operatorX;
 let secondnum;
 let operators = ["+","-","/","*"];
 
@@ -35,6 +66,7 @@ function addNum(number){
 }
 
 function addOperator(operator){
+    operatorX=operator;
     if (operators.includes(result.textContent)){
         result.textContent = operator;
     }else{
@@ -114,6 +146,9 @@ calc.addEventListener("click", (e) => {
             break;
         case 'decimal':
                 
+            break;
+        case 'equals':
+                operate();
             break;
     }
 });
