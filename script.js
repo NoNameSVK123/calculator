@@ -22,15 +22,29 @@ let num;
 let firstnum;
 let operator;
 let secondnum;
+let operators = ["+","-","/","*"];
 
 function addNum(number){
     num = result.textContent;
-    if (num==0){
-        
-    }
-    if (String(num).length<9){
+    if (num==0 || operators.includes(result.textContent)){
+        result.textContent=number;
+    }else if (String(num).length<9){
         result.textContent+=number;
         num = result.textContent;
+    }
+}
+
+function addOperator(operator){
+    if (operators.includes(result.textContent)){
+        result.textContent = operator;
+    }else{
+        if (firstnum==undefined){
+            firstnum=Number(result.textContent);
+            result.textContent = operator;
+        }else{
+            secondnum=Number(result.textContent);
+            result.textContent = operator;
+        }
     }
 }
 
@@ -78,16 +92,16 @@ calc.addEventListener("click", (e) => {
             addNum(0);
             break;
         case 'add':
-                
+                addOperator("+");
             break;
         case 'subtract':
-                
+            addOperator("-");
             break;
         case 'divide':
-                
+            addOperator("/");
             break;
         case 'multiply':
-                
+            addOperator("*");
             break;
         case 'ac':
             clear();
