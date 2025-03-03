@@ -12,6 +12,7 @@ body{
     border-radius: 5px;
 }
 
+
 .result{
     width: 100%;
     font-size: 4.1em;
@@ -36,10 +37,20 @@ body{
     background-color: orange;
 }
 
+
+.selected{
+    background-color: yellow;
+}
+
 .func{
     background-color: rgb(85, 85, 209);
 }
 
 .num{
     background-color: #32ce9a;
+}
+
+
+.button:hover{
+    opacity: 80%;
 }
